@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Service — Kawe Nia Distrik Wania</title>
+  <meta name="description" content="Syarat dan Ketentuan Layanan Kawe Nia - Asisten Digital Distrik Wania. Aturan penggunaan layanan publik digital untuk SKTM, aspirasi, dan pengaduan.">
+  <meta property="og:title" content="Terms of Service — Kawe Nia Distrik Wania">
+  <meta property="og:description" content="Syarat dan Ketentuan Penggunaan Layanan Kawe Nia">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://distrikwania.com/terms">
+  <meta property="og:image" content="https://distrikwania.com/assets/og-image.png">
+  <link rel="icon" href="https://distrikwania.com/assets/favicon.png">
+
+  <style>
+    :root{
+      --bg:#0a0f1c; --panel:#0f1629; --ink:#f8fafc; --muted:#94a3b8;
+      --accent:#10b981; --accent-2:#06b6d4; --accent-3:#8b5cf6; --line:#1e293b;
+      --danger:#f87171; --warning:#fbbf24; --radius:24px; --shadow:0 25px 50px -12px rgba(0,0,0,.4);
+      --space:clamp(16px,2.8vw,24px); --gradient-1:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+      --gradient-2:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);
+      --gradient-3:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--ink); line-height:1.7;
+      font-family:'Inter',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
+      background:#0a0f1c;
+      min-height:100svh;
+      overflow-x:hidden;
+    }
+    .bg{
+      position:fixed; inset:0; z-index:-1; pointer-events:none;
+      background:
+        radial-gradient(ellipse 1200px 600px at 65% 0%, rgba(16,185,129,.12), transparent 50%),
+        radial-gradient(ellipse 800px 400px at 0% 100%, rgba(139,92,246,.08), transparent 50%),
+        radial-gradient(ellipse 1000px 500px at 100% 50%, rgba(6,182,212,.06), transparent 50%),
+        linear-gradient(145deg,#0a0f1c 0%,#0f1629 35%,#1e293b 70%,#0a0f1c 100%);
+      background-attachment:fixed;
+    }
+    .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+    a{color:var(--accent);transition:all 0.3s cubic-bezier(0.4,0,0.2,1);text-decoration:none}
+    a:hover{color:var(--accent-2);text-decoration:underline}
+
+    /* Topbar */
+    .topbar{display:flex;align-items:center;gap:20px;padding:24px 0;position:relative}
+    .topbar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(148,163,184,.2),transparent)}
+    .brand{display:flex;align-items:center;gap:16px;min-width:0}
+    .brand img.logo{
+      width:48px; aspect-ratio:1/1; object-fit:contain; background:linear-gradient(135deg,#1e293b,#334155);
+      border-radius:12px; display:block; transition:transform 0.3s ease;
+      box-shadow:0 8px 25px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.1);
+    }
+    .brand img.logo:hover{transform:scale(1.05)}
+    .brand .title{font-weight:700;font-size:18px;background:linear-gradient(135deg,#f8fafc,#cbd5e1);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .back-btn{margin-left:auto;display:flex;align-items:center;gap:8px;
+      background:rgba(255,255,255,.05);color:#f8fafc;border:1px solid rgba(148,163,184,.2);
+      padding:10px 16px;border-radius:12px;font-size:14px;font-weight:500;
+      backdrop-filter:blur(10px);transition:all 0.3s ease}
+    .back-btn:hover{background:rgba(255,255,255,.1);transform:translateY(-1px)}
+
+    /* Content */
+    .content{margin:40px 0 60px}
+    .content-card{
+      background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+      border:1px solid rgba(148,163,184,.15); border-radius:var(--radius); 
+      box-shadow:var(--shadow); overflow:hidden;backdrop-filter:blur(20px);position:relative;
+      padding:48px;
+    }
+    .content-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent)}
+
+    .page-title{
+      font-size:clamp(24px,4vw,36px);font-weight:900;margin:0 0 16px;
+      background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 50%,#cbd5e1 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+      line-height:1.2
+    }
+    .page-subtitle{color:#94a3b8;font-size:16px;margin:0 0 40px;line-height:1.6}
+    .last-updated{
+      background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(139,92,246,.08));
+      border:1px solid rgba(16,185,129,.25);border-radius:12px;padding:12px 16px;
+      margin-bottom:40px;font-size:14px;color:#a7f3d0
+    }
+
+    h2{font-size:24px;font-weight:700;margin:40px 0 16px;color:#f8fafc;
+      padding-bottom:8px;border-bottom:2px solid rgba(16,185,129,.3)}
+    h2:first-of-type{margin-top:0}
+    h3{font-size:18px;font-weight:600;margin:24px 0 12px;color:#e2e8f0}
+    p{margin:0 0 16px;color:#cbd5e1;line-height:1.7}
+    ul,ol{margin:16px 0;padding-left:24px;color:#cbd5e1}
+    li{margin:8px 0;line-height:1.6}
+    strong{color:#f8fafc;font-weight:600}
+    em{color:#a5b4fc;font-style:normal;font-weight:500}
+
+    .info-box{
+      background:linear-gradient(135deg,rgba(6,182,212,.1),rgba(139,92,246,.08));
+      border:1px solid rgba(6,182,212,.25);border-radius:16px;padding:20px;
+      margin:24px 0;position:relative
+    }
+    .info-box::before{content:'ℹ️';font-size:18px;margin-right:8px}
+    .info-box p{margin:0;color:#c7d2fe}
+
+    .warning-box{
+      background:linear-gradient(135deg,rgba(251,191,36,.1),rgba(245,158,11,.08));
+      border:1px solid rgba(251,191,36,.25);border-radius:16px;padding:20px;
+      margin:24px 0;position:relative
+    }
+    .warning-box::before{content:'⚠️';font-size:18px;margin-right:8px}
+    .warning-box p{margin:0;color:#fef3c7}
+
+    .success-box{
+      background:linear-gradient(135deg,rgba(16,185,129,.1),rgba(5,150,105,.08));
+      border:1px solid rgba(16,185,129,.25);border-radius:16px;padding:20px;
+      margin:24px 0;position:relative
+    }
+    .success-box::before{content:'✅';font-size:18px;margin-right:8px}
+    .success-box p{margin:0;color:#a7f3d0}
+
+    .contact-section{
+      background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
+      border:1px solid rgba(148,163,184,.15);border-radius:20px;padding:32px;
+      margin-top:40px;text-align:center
+    }
+    .contact-section h3{margin-top:0;color:#f8fafc}
+
+    .table-container{
+      overflow-x:auto;margin:20px 0;border-radius:12px;
+      background:rgba(255,255,255,.02);border:1px solid rgba(148,163,184,.15)
+    }
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:12px 16px;text-align:left;border-bottom:1px solid rgba(148,163,184,.1)}
+    th{background:rgba(16,185,129,.1);color:#a7f3d0;font-weight:600}
+    td{color:#cbd5e1}
+    tr:last-child td{border-bottom:none}
+
+    /* Footer */
+    footer{margin:48px 0 60px;color:#94a3b8;font-size:13px;display:flex;flex-wrap:wrap;gap:16px;
+      justify-content:space-between;padding-top:32px;position:relative}
+    footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(148,163,184,.2),transparent)}
+    footer .links{display:flex;gap:20px;flex-wrap:wrap}
+    footer a{text-decoration:none;color:#cbd5e1;font-weight:500;transition:color 0.3s ease}
+    footer a:hover{color:#f8fafc}
+
+    /* Responsive */
+    @media (max-width:768px){
+      .wrap{padding:0 16px}
+      .content-card{padding:24px}
+      .topbar{flex-direction:column;gap:16px;text-align:center}
+      footer{flex-direction:column;text-align:center}
+      .table-container{font-size:14px}
+    }
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="brand">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Lambang_Kabupaten_Mimika.jpg/500px-Lambang_Kabupaten_Mimika.jpg" alt="Lambang Kabupaten">
+        <div class="title">Kawe Nia • Terms of Service</div>
+      </div>
+      <a href="index.html" class="back-btn">← Kembali ke Beranda</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <div class="content-card">
+        <h1 class="page-title">Syarat dan Ketentuan Layanan</h1>
+        <p class="page-subtitle">Ketentuan penggunaan layanan publik digital Kawe Nia untuk memastikan pelayanan yang efektif, transparan, dan sesuai peraturan perundang-undangan.</p>
+        
+        <div class="last-updated">
+          <strong>Terakhir diperbarui:</strong> 1 Oktober 2025
+        </div>
+
+        <h2>1. Penerimaan Ketentuan</h2>
+        <p>Dengan mengakses dan menggunakan layanan Kawe Nia, Anda menyatakan bahwa:</p>
+        <ul>
+          <li><strong>Telah membaca dan memahami</strong> seluruh syarat dan ketentuan ini</li>
+          <li><strong>Menyetujui</strong> untuk terikat dengan ketentuan yang berlaku</li>
+          <li><strong>Memiliki kapasitas hukum</strong> untuk menggunakan layanan publik</li>
+          <li><strong>Memberikan informasi yang benar</strong> dan dapat dipertanggungjawabkan</li>
+        </ul>
+
+        <div class="warning-box">
+          <p><strong>Penting:</strong> Jika Anda tidak menyetujui syarat dan ketentuan ini, mohon untuk tidak menggunakan layanan Kawe Nia.</p>
+        </div>
+
+        <h2>2. Definisi Layanan</h2>
+        <p>Kawe Nia adalah sistem pelayanan publik digital yang menyediakan:</p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Jenis Layanan</th>
+                <th>Deskripsi</th>
+                <th>Waktu Proses</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>SKTM</strong></td>
+                <td>Surat Keterangan Tidak Mampu</td>
+                <td>1-3 hari kerja</td>
+              </tr>
+              <tr>
+                <td><strong>Aspirasi</strong></td>
+                <td>Penyampaian saran dan ide pembangunan</td>
+                <td>7-14 hari kerja</td>
+              </tr>
+              <tr>
+                <td><strong>Pengaduan</strong></td>
+                <td>Pelaporan masalah infrastruktur/layanan</td>
+                <td>1-7 hari kerja</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>3. Persyaratan Pengguna</h2>
+        
+        <h3>Kelayakan Pengguna</h3>
+        <ul>
+          <li><strong>Warga yang terdaftar</strong> di wilayah Distrik Wania</li>
+          <li><strong>Memiliki NIK yang valid</strong> dan terdaftar di Dukcapil</li>
+          <li><strong>Berusia minimal 17 tahun</strong> atau didampingi wali</li>
+          <li><strong>Memiliki akses WhatsApp</strong> untuk komunikasi layanan</li>
+        </ul>
+
+        <h3>Dokumen yang Diperlukan</h3>
+        <ul>
+          <li><strong>KTP Elektronik</strong> yang masih berlaku</li>
+          <li><strong>Kartu Keluarga (KK)</strong> - untuk layanan tertentu</li>
+          <li><strong>Surat Pengantar RT/RW</strong> - sesuai jenis permohonan</li>
+          <li><strong>Dokumen pendukung</strong> - sesuai kebutuhan layanan</li>
+        </ul>
+
+        <h2>4. Kewajiban Pengguna</h2>
+        
+        <h3>Kebenaran Informasi</h3>
+        <p>Pengguna wajib:</p>
+        <ul>
+          <li><strong>Memberikan data yang akurat</strong> dan dapat diverifikasi</li>
+          <li><strong>Melengkapi dokumen</strong> sesuai persyaratan yang berlaku</li>
+          <li><strong>Memperbarui informasi</strong> jika terjadi perubahan data</li>
+          <li><strong>Bertanggung jawab</strong> atas kebenaran informasi yang diberikan</li>
+        </ul>
+
+        <h3>Penggunaan yang Bertanggung Jawab</h3>
+        <ul>
+          <li><strong>Tidak menyalahgunakan sistem</strong> untuk tujuan yang tidak sah</li>
+          <li><strong>Tidak mengganggu operasional</strong> layanan atau sistem</li>
+          <li><strong>Menghormati petugas</strong> dan pengguna lain</li>
+          <li><strong>Menjaga kerahasiaan</strong> akun dan informasi pribadi</li>
+        </ul>
+
+        <div class="info-box">
+          <p><strong>Catatan:</strong> Penyalahgunaan layanan dapat berakibat pada pemblokiran akses dan tindakan hukum sesuai peraturan yang berlaku.</p>
+        </div>
+
+        <h2>5. Larangan Penggunaan</h2>
+        <p>Pengguna <strong>dilarang</strong> melakukan hal-hal berikut:</p>
+
+        <h3>Aktivitas Ilegal</h3>
+        <ul>
+          <li><strong>Pemalsuan dokumen</strong> atau identitas</li>
+          <li><strong>Penyebaran informasi</strong> yang menyesatkan</li>
+          <li><strong>Pencemaran nama baik</strong> instansi atau petugas</li>
+          <li><strong>Pelanggaran hak cipta</strong> dalam konten yang diunggah</li>
+        </ul>
+
+        <h3>Gangguan Sistem</h3>
+        <ul>
+          <li><strong>Akses tidak sah</strong> ke sistem atau database</li>
+          <li><strong>Serangan siber</strong> dalam bentuk apapun</li>
+          <li><strong>Spam atau flooding</strong> pesan ke sistem</li>
+          <li><strong>Reverse engineering</strong> aplikasi atau sistem</li>
+        </ul>
+
+        <h2>6. Hak dan Kewajiban Penyedia Layanan</h2>
+        
+        <h3>Hak Kawe Nia</h3>
+        <ul>
+          <li><strong>Memverifikasi kebenaran</strong> dokumen dan data pengguna</li>
+          <li><strong>Menolak permohonan</strong> yang tidak memenuhi syarat</li>
+          <li><strong>Memblokir akses</strong> pengguna yang melanggar ketentuan</li>
+          <li><strong>Mengubah layanan</strong> untuk perbaikan sistem</li>
+        </ul>
+
+        <h3>Kewajiban Kawe Nia</h3>
+        <ul>
+          <li><strong>Memberikan layanan</strong> sesuai standar yang ditetapkan</li>
+          <li><strong>Melindungi data pribadi</strong> sesuai kebijakan privasi</li>
+          <li><strong>Memberikan informasi</strong> yang jelas tentang proses layanan</li>
+          <li><strong>Menanggapi pengaduan</strong> dengan responsif dan profesional</li>
+        </ul>
+
+        <h2>7. Waktu Layanan dan Pemeliharaan</h2>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Jenis Aktivitas</th>
+                <th>Waktu Operasional</th>
+                <th>Keterangan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sistem Online</strong></td>
+                <td>24/7</td>
+                <td>Penerimaan permohonan otomatis</td>
+              </tr>
+              <tr>
+                <td><strong>Verifikasi Manual</strong></td>
+                <td>08.00-16.00 WIT</td>
+                <td>Senin-Jumat (hari kerja)</td>
+              </tr>
+              <tr>
+                <td><strong>Customer Service</strong></td>
+                <td>08.00-17.00 WIT</td>
+                <td>Senin-Jumat via WhatsApp</td>
+              </tr>
+              <tr>
+                <td><strong>Pemeliharaan</strong></td>
+                <td>00.00-04.00 WIT</td>
+                <td>Minggu pertama setiap bulan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="warning-box">
+          <p><strong>Downtime Terjadwal:</strong> Sistem akan mengalami pemeliharaan rutin setiap minggu pertama dalam bulan pada pukul 00.00-04.00 WIT. Pemberitahuan akan disampaikan minimal 48 jam sebelumnya.</p>
+        </div>
+
+        <h2>8. Biaya Layanan</h2>
+        <p>Layanan Kawe Nia disediakan <strong>gratis</strong> kepada masyarakat sebagai bentuk pelayanan publik. Namun:</p>
+        <ul>
+          <li><strong>Biaya komunikasi</strong> (pulsa/data internet) ditanggung pengguna</li>
+          <li><strong>Biaya pencetakan</strong> dokumen fisik (jika diperlukan) ditanggung pengguna</li>
+          <li><strong>Biaya transportasi</strong> untuk pengambilan dokumen ditanggung pengguna</li>
+          <li><strong>Tidak ada pungutan liar</strong> dalam bentuk apapun</li>
+        </ul>
+
+        <div class="success-box">
+          <p><strong>Komitmen Bebas Pungli:</strong> Kawe Nia berkomitmen memberikan layanan gratis. Laporkan jika ada permintaan pembayaran melalui kontak yang tersedia.</p>
+        </div>
+
+        <h2>9. Keamanan dan Privasi</h2>
+        <p>Untuk detail lengkap mengenai perlindungan data, silakan baca <a href="privacy.html">Kebijakan Privasi</a> kami. Ringkasan poin penting:</p>
+        <ul>
+          <li><strong>Data terenkripsi</strong> selama transmisi dan penyimpanan</li>
+          <li><strong>Akses terbatas</strong> hanya untuk petugas yang berwenang</li>
+          <li><strong>Audit trail</strong> untuk semua aktivitas sistem</li>
+          <li><strong>Backup regular</strong> untuk mencegah kehilangan data</li>
+        </ul>
+
+        <h2>10. Penolakan Layanan</h2>
+        <p>Kawe Nia berhak menolak atau menghentikan layanan jika:</p>
+        <ul>
+          <li><strong>Data tidak lengkap</strong> atau tidak memenuhi persyaratan</li>
+          <li><strong>Dokumen palsu</strong> atau diragukan keasliannya</li>
+          <li><strong>Pelanggaran ketentuan</strong> penggunaan sistem</li>
+          <li><strong>Gangguan keamanan</strong> atau aktivitas mencurigakan</li>
+          <li><strong>Permintaan di luar kewenangan</strong> Distrik Wania</li>
+        </ul>
+
+        <h2>11. Batasan Tanggung Jawab</h2>
+        <p>Kawe Nia tidak bertanggung jawab atas:</p>
+        <ul>
+          <li><strong>Kerugian</strong> akibat kesalahan informasi yang diberikan pengguna</li>
+          <li><strong>Gangguan layanan</strong> di luar kendali (force majeure)</li>
+          <li><strong>Penyalahgunaan dokumen</strong> oleh pihak ketiga</li>
+          <li><strong>Keputusan</strong> instansi lain yang menggunakan dokumen kami</li>
+        </ul>
+
+        <h2>12. Penyelesaian Sengketa</h2>
+        
+        <h3>Mekanisme Penyelesaian</h3>
+        <ol>
+          <li><strong>Mediasi Internal</strong> - Melalui customer service Kawe Nia</li>
+          <li><strong>Eskalasi ke Kepala Distrik</strong> - Jika mediasi internal tidak berhasil</li>
+          <li><strong>Pengadilan Negeri</strong> - Sebagai upaya hukum terakhir</li>
+        </ol>
+
+        <h3>Hukum yang Berlaku</h3>
+        <p>Syarat dan ketentuan ini tunduk pada:</p>
+        <ul>
+          <li><strong>Hukum Republik Indonesia</strong></li>
+          <li><strong>Peraturan Daerah</strong> Kabupaten Mimika</li>
+          <li><strong>Kebijakan</strong> Pemerintah Distrik Wania</li>
+        </ul>
+
+        <h2>13. Perubahan Ketentuan</h2>
+        <p>Kawe Nia berhak mengubah syarat dan ketentuan ini dengan ketentuan:</p>
+        <ul>
+          <li><strong>Pemberitahuan</strong> minimal 30 hari sebelum perubahan berlaku</li>
+          <li><strong>Publikasi</strong> di website dan media komunikasi resmi</li>
+          <li><strong>Kesempatan</strong> bagi pengguna untuk memberikan masukan</li>
+          <li><strong>Penolakan perubahan</strong> berarti penghentian penggunaan layanan</li>
+        </ul>
+
+        <h2>14. Kontak dan Pengaduan</h2>
+        <div class="contact-section">
+          <h3>Tim Layanan Pelanggan</h3>
+          <p><strong>Email:</strong> mimikawania@gmail.com</p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/6281274789992?text=Hallo%20KaweNia%20-%20Pertanyaan%20ToS">+62 812-7478-9992</a></p>
+          <p><strong>Alamat:</strong> Jln. Cendrawasih SP IV, Timika, Papua Tengah 99910</p>
+          <p><strong>Jam Layanan:</strong> Senin–Jumat, 08.00–17.00 WIT</p>
+        </div>
+
+        <h3>Prosedur Pengaduan</h3>
+        <ol>
+          <li><strong>Hubungi customer service</strong> melalui kontak di atas</li>
+          <li><strong>Jelaskan masalah</strong> dengan detail dan sertakan bukti</li>
+          <li><strong>Tunggu respons</strong> maksimal 2x24 jam</li>
+          <li><strong>Ikuti instruksi</strong> penyelesaian yang diberikan</li>
+          <li><strong>Evaluasi kepuasan</strong> setelah masalah teratasi</li>
+        </ol>
+
+        <h2>15. Penutup</h2>
+        <p>Syarat dan ketentuan ini berlaku sejak tanggal publikasi dan akan terus berlaku selama Anda menggunakan layanan Kawe Nia. Dengan menggunakan layanan kami, Anda mengakui bahwa telah membaca, memahami, dan menyetujui seluruh ketentuan di atas.</p>
+
+        <div class="info-box">
+          <p><strong>Komitmen Pelayanan:</strong> Kawe Nia berkomitmen memberikan pelayanan publik yang cepat, transparan, dan profesional sesuai prinsip good governance.</p>
+        </div>
+
+        <p style="margin-top:40px;padding-top:24px;border-top:1px solid rgba(148,163,184,.2);color:#94a3b8;font-style:italic;">
+          Dengan menggunakan layanan Kawe Nia, Anda menyatakan telah membaca, memahami, dan menyetujui syarat dan ketentuan yang berlaku.
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="section">
+      <div>© <span id="tahun"></span> Pemerintah Distrik Wania • Kawe Nia</div>
+      <div class="links">
+        <a href="index.html">Beranda</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Tahun dinamis
+    document.getElementById('tahun').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
