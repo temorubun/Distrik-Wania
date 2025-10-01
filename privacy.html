@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Kawe Nia Distrik Wania</title>
+  <meta name="description" content="Kebijakan Privasi Kawe Nia - Asisten Digital Distrik Wania. Informasi tentang pengumpulan, penggunaan, dan perlindungan data pribadi pengguna.">
+  <meta property="og:title" content="Privacy Policy — Kawe Nia Distrik Wania">
+  <meta property="og:description" content="Kebijakan Privasi dan Perlindungan Data Kawe Nia">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://distrikwania.com/privacy">
+  <meta property="og:image" content="https://distrikwania.com/assets/og-image.png">
+  <link rel="icon" href="https://distrikwania.com/assets/favicon.png">
+
+  <style>
+    :root{
+      --bg:#0a0f1c; --panel:#0f1629; --ink:#f8fafc; --muted:#94a3b8;
+      --accent:#10b981; --accent-2:#06b6d4; --accent-3:#8b5cf6; --line:#1e293b;
+      --danger:#f87171; --warning:#fbbf24; --radius:24px; --shadow:0 25px 50px -12px rgba(0,0,0,.4);
+      --space:clamp(16px,2.8vw,24px); --gradient-1:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+      --gradient-2:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);
+      --gradient-3:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--ink); line-height:1.7;
+      font-family:'Inter',ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
+      background:#0a0f1c;
+      min-height:100svh;
+      overflow-x:hidden;
+    }
+    .bg{
+      position:fixed; inset:0; z-index:-1; pointer-events:none;
+      background:
+        radial-gradient(ellipse 1200px 600px at 65% 0%, rgba(16,185,129,.12), transparent 50%),
+        radial-gradient(ellipse 800px 400px at 0% 100%, rgba(139,92,246,.08), transparent 50%),
+        radial-gradient(ellipse 1000px 500px at 100% 50%, rgba(6,182,212,.06), transparent 50%),
+        linear-gradient(145deg,#0a0f1c 0%,#0f1629 35%,#1e293b 70%,#0a0f1c 100%);
+      background-attachment:fixed;
+    }
+    .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+    a{color:var(--accent);transition:all 0.3s cubic-bezier(0.4,0,0.2,1);text-decoration:none}
+    a:hover{color:var(--accent-2);text-decoration:underline}
+
+    /* Topbar */
+    .topbar{display:flex;align-items:center;gap:20px;padding:24px 0;position:relative}
+    .topbar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(148,163,184,.2),transparent)}
+    .brand{display:flex;align-items:center;gap:16px;min-width:0}
+    .brand img.logo{
+      width:48px; aspect-ratio:1/1; object-fit:contain; background:linear-gradient(135deg,#1e293b,#334155);
+      border-radius:12px; display:block; transition:transform 0.3s ease;
+      box-shadow:0 8px 25px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.1);
+    }
+    .brand img.logo:hover{transform:scale(1.05)}
+    .brand .title{font-weight:700;font-size:18px;background:linear-gradient(135deg,#f8fafc,#cbd5e1);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .back-btn{margin-left:auto;display:flex;align-items:center;gap:8px;
+      background:rgba(255,255,255,.05);color:#f8fafc;border:1px solid rgba(148,163,184,.2);
+      padding:10px 16px;border-radius:12px;font-size:14px;font-weight:500;
+      backdrop-filter:blur(10px);transition:all 0.3s ease}
+    .back-btn:hover{background:rgba(255,255,255,.1);transform:translateY(-1px)}
+
+    /* Content */
+    .content{margin:40px 0 60px}
+    .content-card{
+      background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+      border:1px solid rgba(148,163,184,.15); border-radius:var(--radius); 
+      box-shadow:var(--shadow); overflow:hidden;backdrop-filter:blur(20px);position:relative;
+      padding:48px;
+    }
+    .content-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent)}
+
+    .page-title{
+      font-size:clamp(24px,4vw,36px);font-weight:900;margin:0 0 16px;
+      background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 50%,#cbd5e1 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+      line-height:1.2
+    }
+    .page-subtitle{color:#94a3b8;font-size:16px;margin:0 0 40px;line-height:1.6}
+    .last-updated{
+      background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(139,92,246,.08));
+      border:1px solid rgba(16,185,129,.25);border-radius:12px;padding:12px 16px;
+      margin-bottom:40px;font-size:14px;color:#a7f3d0
+    }
+
+    h2{font-size:24px;font-weight:700;margin:40px 0 16px;color:#f8fafc;
+      padding-bottom:8px;border-bottom:2px solid rgba(16,185,129,.3)}
+    h2:first-of-type{margin-top:0}
+    h3{font-size:18px;font-weight:600;margin:24px 0 12px;color:#e2e8f0}
+    p{margin:0 0 16px;color:#cbd5e1;line-height:1.7}
+    ul,ol{margin:16px 0;padding-left:24px;color:#cbd5e1}
+    li{margin:8px 0;line-height:1.6}
+    strong{color:#f8fafc;font-weight:600}
+    em{color:#a5b4fc;font-style:normal;font-weight:500}
+
+    .info-box{
+      background:linear-gradient(135deg,rgba(6,182,212,.1),rgba(139,92,246,.08));
+      border:1px solid rgba(6,182,212,.25);border-radius:16px;padding:20px;
+      margin:24px 0;position:relative
+    }
+    .info-box::before{content:'ℹ️';font-size:18px;margin-right:8px}
+    .info-box p{margin:0;color:#c7d2fe}
+
+    .warning-box{
+      background:linear-gradient(135deg,rgba(251,191,36,.1),rgba(245,158,11,.08));
+      border:1px solid rgba(251,191,36,.25);border-radius:16px;padding:20px;
+      margin:24px 0;position:relative
+    }
+    .warning-box::before{content:'⚠️';font-size:18px;margin-right:8px}
+    .warning-box p{margin:0;color:#fef3c7}
+
+    .contact-section{
+      background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
+      border:1px solid rgba(148,163,184,.15);border-radius:20px;padding:32px;
+      margin-top:40px;text-align:center
+    }
+    .contact-section h3{margin-top:0;color:#f8fafc}
+
+    /* Footer */
+    footer{margin:48px 0 60px;color:#94a3b8;font-size:13px;display:flex;flex-wrap:wrap;gap:16px;
+      justify-content:space-between;padding-top:32px;position:relative}
+    footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(148,163,184,.2),transparent)}
+    footer .links{display:flex;gap:20px;flex-wrap:wrap}
+    footer a{text-decoration:none;color:#cbd5e1;font-weight:500;transition:color 0.3s ease}
+    footer a:hover{color:#f8fafc}
+
+    /* Responsive */
+    @media (max-width:768px){
+      .wrap{padding:0 16px}
+      .content-card{padding:24px}
+      .topbar{flex-direction:column;gap:16px;text-align:center}
+      footer{flex-direction:column;text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="brand">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Lambang_Kabupaten_Mimika.jpg/500px-Lambang_Kabupaten_Mimika.jpg" alt="Lambang Kabupaten">
+        <div class="title">Kawe Nia • Privacy Policy</div>
+      </div>
+      <a href="index.html" class="back-btn">← Kembali ke Beranda</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <div class="content-card">
+        <h1 class="page-title">Kebijakan Privasi</h1>
+        <p class="page-subtitle">Kawe Nia berkomitmen melindungi privasi dan data pribadi pengguna sesuai dengan peraturan perundang-undangan yang berlaku.</p>
+        
+        <div class="last-updated">
+          <strong>Terakhir diperbarui:</strong> 1 Oktober 2025
+        </div>
+
+        <h2>1. Informasi yang Kami Kumpulkan</h2>
+        <p>Dalam memberikan layanan publik digital, Kawe Nia mengumpulkan dan memproses data berikut:</p>
+        
+        <h3>Data Identitas Pribadi</h3>
+        <ul>
+          <li><strong>Nomor Induk Kependudukan (NIK)</strong> - untuk verifikasi identitas</li>
+          <li><strong>Nama lengkap</strong> - sesuai dokumen resmi</li>
+          <li><strong>Alamat tempat tinggal</strong> - untuk penerbitan surat keterangan</li>
+          <li><strong>Nomor telepon/WhatsApp</strong> - untuk komunikasi layanan</li>
+          <li><strong>Foto/scan dokumen</strong> - KTP, KK, surat pengantar RT/RW</li>
+        </ul>
+
+        <h3>Data Teknis</h3>
+        <ul>
+          <li><strong>Alamat IP</strong> dan informasi perangkat</li>
+          <li><strong>Log aktivitas sistem</strong> untuk keamanan dan audit</li>
+          <li><strong>Metadata file</strong> yang diunggah</li>
+        </ul>
+
+        <h2>2. Cara Kami Menggunakan Data</h2>
+        <p>Data pribadi yang dikumpulkan digunakan <em>hanya</em> untuk tujuan:</p>
+        <ol>
+          <li><strong>Pemrosesan layanan publik</strong> - SKTM, aspirasi, pengaduan</li>
+          <li><strong>Verifikasi identitas dan dokumen</strong> - memastikan keaslian permohonan</li>
+          <li><strong>Komunikasi resmi</strong> - pemberitahuan status, konfirmasi, klarifikasi</li>
+          <li><strong>Arsip digital</strong> - penyimpanan dokumen sesuai ketentuan kearsipan</li>
+          <li><strong>Audit dan pelaporan</strong> - untuk transparansi pelayanan publik</li>
+        </ol>
+
+        <div class="info-box">
+          <p><strong>Prinsip Minimisasi Data:</strong> Kami hanya mengumpulkan data yang diperlukan untuk menjalankan layanan dan tidak memproses data untuk tujuan lain di luar yang disebutkan.</p>
+        </div>
+
+        <h2>3. Penyimpanan dan Keamanan Data</h2>
+        
+        <h3>Lokasi Penyimpanan</h3>
+        <ul>
+          <li><strong>Google Drive Aplikasi</strong> - dokumen hasil layanan dengan folder terdedikasi</li>
+          <li><strong>Server lokal terenkripsi</strong> - data sementara selama pemrosesan</li>
+          <li><strong>Sistem arsip digital</strong> - backup dokumen resmi</li>
+        </ul>
+
+        <h3>Periode Penyimpanan</h3>
+        <ul>
+          <li><strong>Dokumen SKTM:</strong> 3 tahun (sesuai ketentuan kearsipan)</li>
+          <li><strong>Data aspirasi/pengaduan:</strong> 2 tahun atau hingga tindak lanjut selesai</li>
+          <li><strong>Log sistem:</strong> 1 tahun untuk audit keamanan</li>
+          <li><strong>Data temporary:</strong> dihapus otomatis setelah proses selesai</li>
+        </ul>
+
+        <h3>Measures Keamanan</h3>
+        <ul>
+          <li><strong>Enkripsi end-to-end</strong> untuk transmisi data</li>
+          <li><strong>Akses terbatas</strong> - hanya petugas yang berwenang</li>
+          <li><strong>Audit trail</strong> - log semua akses dan perubahan data</li>
+          <li><strong>Backup terenkripsi</strong> - pencadangan data secara berkala</li>
+        </ul>
+
+        <h2>4. Pembagian Data dengan Pihak Ketiga</h2>
+        <p>Kawe Nia <strong>tidak menjual, menyewakan, atau memperdagangkan</strong> data pribadi pengguna. Pembagian data hanya dilakukan dalam kondisi:</p>
+
+        <ul>
+          <li><strong>Instansi terkait</strong> - Pemda, Kemendagri untuk verifikasi data kependudukan</li>
+          <li><strong>Kewajiban hukum</strong> - permintaan resmi dari aparat penegak hukum</li>
+          <li><strong>Layanan Google</strong> - dengan scope terbatas (least-privilege principle)</li>
+        </ul>
+
+        <div class="warning-box">
+          <p><strong>Catatan Penting:</strong> Integrasi dengan Google menggunakan prinsip "least-privilege" dengan akses minimal yang diperlukan (misalnya hanya gmail.send untuk email, drive.file untuk dokumen).</p>
+        </div>
+
+        <h2>5. Hak-Hak Pengguna</h2>
+        <p>Sesuai dengan peraturan perlindungan data, pengguna memiliki hak:</p>
+
+        <h3>Hak Akses dan Transparansi</h3>
+        <ul>
+          <li><strong>Melihat data</strong> yang kami simpan tentang Anda</li>
+          <li><strong>Mengetahui tujuan</strong> pemrosesan data</li>
+          <li><strong>Mendapat salinan</strong> dokumen yang telah diterbitkan</li>
+        </ul>
+
+        <h3>Hak Kontrol Data</h3>
+        <ul>
+          <li><strong>Memperbarui data</strong> yang tidak akurat</li>
+          <li><strong>Membatasi pemrosesan</strong> dalam kondisi tertentu</li>
+          <li><strong>Menghapus data</strong> setelah periode retensi berakhir</li>
+        </ul>
+
+        <h3>Hak Portabilitas</h3>
+        <ul>
+          <li><strong>Mengunduh data</strong> dalam format yang dapat dibaca</li>
+          <li><strong>Memindahkan data</strong> ke layanan lain (jika berlaku)</li>
+        </ul>
+
+        <h2>6. Penggunaan Cookies dan Teknologi Tracking</h2>
+        <p>Website Kawe Nia menggunakan teknologi minimal untuk fungsionalitas dasar:</p>
+        <ul>
+          <li><strong>Session cookies</strong> - untuk menjaga sesi pengguna</li>
+          <li><strong>Security cookies</strong> - untuk perlindungan CSRF</li>
+          <li><strong>Preference cookies</strong> - untuk menyimpan pengaturan bahasa</li>
+        </ul>
+
+        <div class="info-box">
+          <p>Kami <strong>tidak menggunakan</strong> cookies untuk tracking iklan, analitik pihak ketiga, atau profiling pengguna.</p>
+        </div>
+
+        <h2>7. Perlindungan Data Anak</h2>
+        <p>Layanan Kawe Nia dapat digunakan untuk keperluan keluarga yang melibatkan data anak di bawah 18 tahun:</p>
+        <ul>
+          <li><strong>Persetujuan orang tua/wali</strong> diperlukan untuk pemrosesan data anak</li>
+          <li><strong>Perlindungan ekstra</strong> diterapkan untuk data sensitif anak</li>
+          <li><strong>Akses terbatas</strong> hanya untuk tujuan administrasi kependudukan</li>
+        </ul>
+
+        <h2>8. Pembaruan Kebijakan</h2>
+        <p>Kebijakan privasi ini dapat diperbarui untuk:</p>
+        <ul>
+          <li><strong>Menyesuaikan dengan regulasi baru</strong></li>
+          <li><strong>Memperbaiki layanan</strong> atau menambah fitur</li>
+          <li><strong>Meningkatkan keamanan</strong> dan perlindungan data</li>
+        </ul>
+
+        <div class="info-box">
+          <p><strong>Pemberitahuan Perubahan:</strong> Setiap perubahan material akan disampaikan melalui email, WhatsApp, atau pengumuman di website minimal 30 hari sebelum berlaku.</p>
+        </div>
+
+        <h2>9. Kontak dan Pengaduan</h2>
+        <div class="contact-section">
+          <h3>Data Protection Officer (DPO)</h3>
+          <p><strong>Email:</strong> mimikawania@gmail.com</p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/6281274789992?text=Hallo%20KaweNia%20-%20Pertanyaan%20Privasi">+62 812-7478-9992</a></p>
+          <p><strong>Alamat:</strong> Jln. Cendrawasih SP IV, Timika, Papua Tengah 99910</p>
+          <p><strong>Jam Layanan:</strong> Senin–Jumat, 08.00–16.00 WIT</p>
+        </div>
+
+        <h3>Prosedur Pengaduan</h3>
+        <ol>
+          <li><strong>Hubungi DPO</strong> melalui kontak di atas</li>
+          <li><strong>Sertakan identitas</strong> dan detail masalah privasi</li>
+          <li><strong>Tunggu respons</strong> maksimal 14 hari kerja</li>
+          <li><strong>Eskalasi ke Kominfo</strong> jika tidak puas dengan penanganan</li>
+        </ol>
+
+        <div class="warning-box">
+          <p><strong>Pengaduan Eksternal:</strong> Jika tidak puas dengan penanganan kami, Anda dapat mengajukan pengaduan ke Kementerian Komunikasi dan Informatika melalui <a href="https://www.kominfo.go.id" target="_blank">www.kominfo.go.id</a></p>
+        </div>
+
+        <h2>10. Kepatuhan Regulasi</h2>
+        <p>Kebijakan ini mematuhi:</p>
+        <ul>
+          <li><strong>UU No. 27 Tahun 2022</strong> tentang Perlindungan Data Pribadi</li>
+          <li><strong>PP No. 71 Tahun 2019</strong> tentang Penyelenggaraan Sistem dan Transaksi Elektronik</li>
+          <li><strong>Permenkominfo No. 20 Tahun 2016</strong> tentang Perlindungan Data Pribadi</li>
+          <li><strong>UU No. 25 Tahun 2009</strong> tentang Pelayanan Publik</li>
+        </ul>
+
+        <p style="margin-top:40px;padding-top:24px;border-top:1px solid rgba(148,163,184,.2);color:#94a3b8;font-style:italic;">
+          Dengan menggunakan layanan Kawe Nia, Anda menyatakan telah membaca, memahami, dan menyetujui kebijakan privasi ini.
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="section">
+      <div>© <span id="tahun"></span> Pemerintah Distrik Wania • Kawe Nia</div>
+      <div class="links">
+        <a href="index.html">Beranda</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Tahun dinamis
+    document.getElementById('tahun').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
